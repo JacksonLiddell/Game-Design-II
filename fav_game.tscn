@@ -1,0 +1,52 @@
+[gd_scene load_steps=2 format=3 uid="uid://br6blutkj5pcw"]
+
+[ext_resource type="Script" path="res://FavGame.gd" id="1_mmac4"]
+
+[node name="FavGame" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mmac4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 165.0
+offset_top = 67.0
+offset_right = 490.0
+offset_bottom = 188.0
+text = "-"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btnShow" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = -129.0
+offset_top = 167.0
+offset_right = 24.0
+offset_bottom = 257.0
+text = "Show"
+
+[node name="btnClear" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 166.0
+offset_right = 241.0
+offset_bottom = 256.0
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 328.0
+offset_top = 167.0
+offset_right = 481.0
+offset_bottom = 257.0
+text = "Exit"
+
+[connection signal="pressed" from="Label/btnShow" to="." method="_on_btn_show_pressed"]
+[connection signal="pressed" from="Label/btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="Label/btnExit" to="." method="_on_btn_exit_pressed"]

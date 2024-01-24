@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmcfv0md8krpk"]
+
+[ext_resource type="Script" path="res://AboutMe.gd" id="1_ohpyo"]
+
+[node name="AboutMe" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ohpyo")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 55.0
+offset_right = 437.0
+offset_bottom = 146.0
+
+[node name="btnShow" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = -178.0
+offset_top = 148.0
+offset_right = -1.0
+offset_bottom = 250.0
+text = "Show"
+
+[node name="btnClear" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 54.0
+offset_top = 143.0
+offset_right = 231.0
+offset_bottom = 245.0
+text = "Clear"
+
+[node name="btnExit" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 265.0
+offset_top = 149.0
+offset_right = 442.0
+offset_bottom = 251.0
+text = "Exit"
+
+[connection signal="pressed" from="Label/btnShow" to="." method="_on_btn_show_pressed"]
+[connection signal="pressed" from="Label/btnClear" to="." method="_on_btn_clear_pressed"]
+[connection signal="pressed" from="Label/btnExit" to="." method="_on_btn_exit_pressed"]
